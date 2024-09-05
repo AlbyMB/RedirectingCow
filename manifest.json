@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "RedirectingCow",
+    "version": "1.0",
+    "description": "Redirects user to website they want to be on, from websites they don't want to be on",
+    "permissions": [
+      "webRequest",
+      "webRequestBlocking",
+      "tabs",
+      "storage",
+      "activeTab"
+    ],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/shorts*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  

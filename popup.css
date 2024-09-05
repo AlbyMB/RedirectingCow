@@ -1,0 +1,23 @@
+body{
+    width:auto;
+    height: auto;
+    padding: 10px;
+}
+
+#shuffleIcon{
+    height: 20px;
+    width: auto;
+}
+
+.form-row{
+    align-items: center;
+}
+
+.form-group{
+    padding: 10px;
+}
+
+/* .form-row{
+    display: flex;
+    justify-content: space-between;
+} */
