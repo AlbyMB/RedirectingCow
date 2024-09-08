@@ -1,8 +1,8 @@
 window.onload = (async () => {
     
     const [tab] = await chrome.tabs.query({active: true, lastFocusedWindow: true});
-    console.log(tab.url);
-    document.getElementById("redirectInput").value = tab.url;
+    const shortenedURL = tab.url.substring(0,tab.url.lastIndexOf('/')+1);
+    document.getElementById("redirectInput").value = shortenedURL;
 
     const addRedirectButton = document.getElementById("addRedirectButton");
 
